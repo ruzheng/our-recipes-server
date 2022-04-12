@@ -1,14 +1,23 @@
 const mongoose = require('mongoose')
 
-const eventSchema = new mongoose.Schema({
-  title: {
+const unitSchema = new mongoose.Schema({
+  name: {
     type: String,
     required: true
   },
-  text: {
+  Element: {
     type: String,
     required: true
   },
+  Rarity: {
+    type: String,
+    required: true
+  },
+  Region: {
+    type: String,
+    required: true
+  },
+
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
@@ -18,4 +27,4 @@ const eventSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('Event', eventSchema)
+module.exports = mongoose.model('Unit', unitSchema)
