@@ -67,8 +67,10 @@ router.patch('/units/:id', requireToken, removeBlanks, (req, res, next) => {
   // if the client attempts to change the `owner` property by including a new
   // owner, prevent that by deleting that key/value pair
   delete req.body.unit.owner
+  const unitId = req.params.id
+  const unitData = req.body.unit
 
-  Unit.findById(req.params.id)
+  Unit.findById(unitId)
     .then(handle404)
     .then(unit => {
       // pass the `req` object and the Mongoose record to `requireOwnership`
@@ -76,7 +78,7 @@ router.patch('/units/:id', requireToken, removeBlanks, (req, res, next) => {
       requireOwnership(req, unit)
 
       // pass the result of Mongoose's `.update` to the next `.then`
-      return unit.updateOne(req.body.unit)
+      return unit.updateOne(unitData)
     })
     // if that succeeded, return 204 and no JSON
     .then(() => res.sendStatus(204))

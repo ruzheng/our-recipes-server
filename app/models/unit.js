@@ -5,15 +5,15 @@ const unitSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  Element: {
+  element: {
     type: String,
     required: true
   },
-  Rarity: {
+  rarity: {
     type: String,
     required: true
   },
-  Region: {
+  region: {
     type: String,
     required: true
   },
