@@ -5,6 +5,7 @@ This light program allows the user to store their character units from the game 
 ## Important Links
 
   - Client repo
+  - API repo
   - Deployed Client
   - Deployed API
 
@@ -12,7 +13,7 @@ This light program allows the user to store their character units from the game 
 
 ## Planning Story
 
-TBA
+ Started off with designing my ERD and figuring what can I continuously add to this program to make it seem more robust. After finding what I need in the MVP, I start test out my API's curl scripts. Making sure they all (get, post, patch, delete) work the way it should in my terminal. After all testing completed, going to try implement front-end.
 
 ### User Stories
 
@@ -33,9 +34,9 @@ TBA
 - Express
 - Passport
 
-### Unsolved Problems
+<!-- ### Unsolved Problems
 
-...
+... -->
 
 ***
 
