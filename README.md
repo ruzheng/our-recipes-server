@@ -42,4 +42,4 @@ This light program allows the user to store their character units from the game 
 
 ## ERD
 
-![Genshin API ERD](https://imgur.com/TP1xRws)
+![Genshin API ERD](https://i.imgur.com/TP1xRws.png)
