@@ -31,16 +31,16 @@ const router = express.Router()
 // INDEX
 // GET /examples
 router.get('/units', requireToken, (req, res, next) => {
-  Unit.find()
-    .then(units => {
+  Unit.find({ owner: req.user._id })
+    .then((units) => {
       // `examples` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
       // apply `.toObject` to each one
-      return units.map(unit => unit.toObject())
+      return units.map((unit) => unit.toObject())
     })
-    // respond with status 200 and JSON of the examples
-    .then(units => res.status(200).json({ units: units }))
-    // if an error occurs, pass it to the handler
+  // respond with status 200 and JSON of the examples
+    .then((units) => res.status(200).json({ units: units }))
+  // if an error occurs, pass it to the handler
     .catch(next)
 })
 
@@ -48,9 +48,9 @@ router.get('/units', requireToken, (req, res, next) => {
 // POST /examples
 router.post('/units', requireToken, (req, res, next) => {
   // set owner of new example to be current user
-  req.body.unit.owner = req.user.id
+  req.body.unit.owner = req.user.id // req.body.owner
 
-  Unit.create(req.body.unit)
+  Unit.create(req.body.unit) // req.body
     // respond to succesful `create` with status 201 and JSON of new "example"
     .then(unit => {
       res.status(201).json({ unit: unit.toObject() })

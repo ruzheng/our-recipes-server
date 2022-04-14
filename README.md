@@ -1,6 +1,8 @@
 # Genshin Unit Tracker API
 
-This light program allows the user to store their character units from the game Genshin Impact. Each unit comes with a variety of additional information that will be added as the app updates. 
+This is the back-end of Genshin Unit Tracker.
+
+This is a light program allows the user to store their character units from the game Genshin Impact. Each unit contain information regarding to the unit itself such as name, element, rarity, and region. The goal is to allow the user to have an index of character/units they own in the game and in later version allow the user to attach weapon and artifacts(equipments) to each character.
 
 ## Important Links
 
@@ -13,7 +15,10 @@ This light program allows the user to store their character units from the game 
 
 ## Planning Story
 
- Started off with designing my ERD and figuring what can I continuously add to this program to make it seem more robust. After finding what I need in the MVP, I start test out my API's curl scripts. Making sure they all (get, post, patch, delete) work the way it should in my terminal. After all testing completed, going to try implement front-end.
+1. Designing my ERD and figuring what can I continuously add to this program to make it seem more robust.
+2. Test the user routes and their CURL scripts. Making sure they all (get, post, patch, delete) work. 
+3. Test unit routes and their CURL script.
+4. Move to connecting with Client side.
 
 ### User Stories
 
