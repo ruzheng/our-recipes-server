@@ -2,7 +2,7 @@
 // // GET /examples/5a7db6c74d55bc51bdf39793
 // router.get('/examples/:id', requireToken, (req, res, next) => {
 // // req.params.id will be set based on the `:id` in the route
-// Unit.findById(req.params.id)
+// recipe.findById(req.params.id)
 // eslint-disable-next-line no-tabs
 // 		.then(handle404)
 // eslint-disable-next-line no-tabs

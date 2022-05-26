@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 // require route files
-const unitRoutes = require('./app/routes/unit_routes')
+const recipeRoutes = require('./app/routes/recipe_routes')
 const userRoutes = require('./app/routes/user_routes')
 
 // require middleware
@@ -57,7 +57,7 @@ app.use(requestLogger)
 
 // register route files
 app.use(userRoutes)
-app.use(unitRoutes)
+app.use(recipeRoutes)
 
 // register error handling middleware
 // note that this comes after the route middlewares, because it needs to be
